@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+ MA
+    <aura:attribute name="userName" type="String"></aura:attribute>
+    <lightning:input name="userName_l" value="{!v.userName}" label="Enter your name"></lightning:input>
+    <lightning:button variant="success" label="Success" title="Statrt the exam" onclick="{! c.handleClick }"/>
+</aura:component>
