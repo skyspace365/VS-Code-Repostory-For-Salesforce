@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!--if we want to call the child component from direct parent-->
+    <!--
+    <c:ComponentEventChildComponent registeringComponentEvent="{!c.handleComponentEvent}"/>
+    -->
+    
+    <aura:handler name="registeringComponentEvent" event="c:ComponentEvent" action="{!c.handleComponentEvent}"></aura:handler>
+    <c:ComponentEventChildComponent/>
+    
+</aura:component>

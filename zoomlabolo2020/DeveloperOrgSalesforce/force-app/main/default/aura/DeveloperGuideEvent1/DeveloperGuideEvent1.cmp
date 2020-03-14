@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="text" type="String" default="Just a string. Waiting for change."/>
+    <input type="button" value="Flawed HTML Button"
+           onclick="alert('this will not work')"/>
+    <br/>
+    <lightning:button label="Framework Button" onclick="{!c.handleClick}"/>
+    <br/>
+    {!v.text}
+    
+    <!--Component Event fireing from the component-->
+    <aura:registerEvent name="registeringComponentEvent" type="c:ComponentEvent"></aura:registerEvent>
+     <lightning:button label="Fire Component Event" onclick="{!c.fireComponetEvent}"/>
+    <!--Component Event handling by the same component-->
+    <aura:handler name="registeringComponentEvent" event="c:ComponentEvent" action="{!c.handleComponentEvent}" phase="capture"></aura:handler>
+</aura:component>
